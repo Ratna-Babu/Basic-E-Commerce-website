@@ -1,0 +1,123 @@
+.main{
+    margin: 20px;
+    padding: 10px;
+    width: 100%;
+    position: center;
+    display:grid;
+    grid-template-columns: 20% 75%;
+
+}
+.category{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    height: 400px;
+    border-radius: 10px;
+}
+.button-category {
+    --color: #282c34;
+    padding: 0.8em 1.7em;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+.button-category::before, .button-category::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.button-category::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button-category::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button-category:hover::before, .button-category:hover::after, .button-category.active::before, .button-category.active::after {
+    height: 410px;
+    width: 410px;
+}
+
+.button-category:hover, .button-category.active {
+    color: aqua;
+}
+
+.button-category:active {
+    filter: brightness(.8);
+}
+
+.input-bar{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}
+.list{
+    background-color: aqua;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+}
+.product-card{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 300px;
+}
+.image-wrapper{
+    width: 100%;
+    aspect-ratio: 1;
+}
+.image-wrapper > img {
+    width: 100%;
+    max-height: 300px;   
+}
+.product-title{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.product-category{
+    font-size: 15px;
+    background-color: aqua;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.product-price{
+    font-size: 20px;
+    padding: 10px;
+}
+.product-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

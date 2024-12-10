@@ -1,0 +1,15 @@
+*{
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.App{
+  padding: 10px;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+.App-header{
+  color:aqua;
+  text-align: center;
+}
